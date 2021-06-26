@@ -26,10 +26,12 @@ for json_name in tqdm.tqdm(jsons):
     
     for obj in json_dict["objects"]:
         if obj["classTitle"]=="Freespace":
-            cv2.fillPoly(mask, np.array([obj["points"]["exterior"]]), color=100)
+            #freespace = np.array([obj["points"]["exterior"]], dtype=np.int32)
+            cv2.fillPoly(mask, np.array([obj["points"]["exterior"]], dtype=np.int32), color=100)
             
             if obj["points"]["interior"] != []:
                 for interior in obj["points"]["interior"]:
-                    cv2.fillPoly(mask, np.array([interior]), color=0)
+                    #fs_interior = np.array([interior], dtype=np.int32)
+                    cv2.fillPoly(mask, np.array([interior], dtype=np.int32), color=0)
 
     cv2.imwrite(mask_path, mask.astype(np.uint8))
