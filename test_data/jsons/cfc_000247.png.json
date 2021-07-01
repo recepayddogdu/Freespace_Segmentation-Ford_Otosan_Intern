@@ -1,0 +1,775 @@
+{
+    "description": "",
+    "tags": [
+        {
+            "id": 42598,
+            "tagId": 25,
+            "name": "Daytime",
+            "value": "Day",
+            "labelerLogin": "abilgin4",
+            "createdAt": "2020-06-29T13:43:36.823Z",
+            "updatedAt": "2020-06-29T13:43:36.823Z"
+        },
+        {
+            "id": 42600,
+            "tagId": 27,
+            "name": "Traffic Condition",
+            "value": "Light Traffic",
+            "labelerLogin": "abilgin4",
+            "createdAt": "2020-06-29T13:43:46.984Z",
+            "updatedAt": "2020-06-29T13:43:46.984Z"
+        },
+        {
+            "id": 42601,
+            "tagId": 26,
+            "name": "Weather Condition",
+            "value": "Cloudy",
+            "labelerLogin": "abilgin4",
+            "createdAt": "2020-06-29T13:43:59.663Z",
+            "updatedAt": "2020-06-29T13:43:59.663Z"
+        },
+        {
+            "id": 42599,
+            "tagId": 28,
+            "name": "Scene Type",
+            "value": "No Anomaly",
+            "labelerLogin": "abilgin4",
+            "createdAt": "2020-06-29T13:43:42.030Z",
+            "updatedAt": "2020-06-29T13:43:42.030Z"
+        }
+    ],
+    "size": {
+        "height": 1208,
+        "width": 1920
+    },
+    "objects": [
+        {
+            "id": 106045,
+            "classId": 36,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "abilgin4",
+            "createdAt": "2020-06-29T13:35:18.417Z",
+            "updatedAt": "2020-07-23T09:44:50.628Z",
+            "tags": [],
+            "classTitle": "Traffic Sign",
+            "points": {
+                "exterior": [
+                    [
+                        678,
+                        400
+                    ],
+                    [
+                        719,
+                        419
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 106047,
+            "classId": 36,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "abilgin4",
+            "createdAt": "2020-06-29T13:35:37.136Z",
+            "updatedAt": "2020-07-23T09:44:50.628Z",
+            "tags": [],
+            "classTitle": "Traffic Sign",
+            "points": {
+                "exterior": [
+                    [
+                        593,
+                        415
+                    ],
+                    [
+                        688,
+                        487
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 106049,
+            "classId": 36,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "abilgin4",
+            "createdAt": "2020-06-29T13:35:54.437Z",
+            "updatedAt": "2020-07-23T09:44:50.628Z",
+            "tags": [],
+            "classTitle": "Traffic Sign",
+            "points": {
+                "exterior": [
+                    [
+                        380,
+                        563
+                    ],
+                    [
+                        401,
+                        576
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 106050,
+            "classId": 36,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "abilgin4",
+            "createdAt": "2020-06-29T13:36:02.234Z",
+            "updatedAt": "2020-07-23T09:44:50.628Z",
+            "tags": [],
+            "classTitle": "Traffic Sign",
+            "points": {
+                "exterior": [
+                    [
+                        405,
+                        541
+                    ],
+                    [
+                        432,
+                        563
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 106053,
+            "classId": 42,
+            "description": "",
+            "geometryType": "line",
+            "labelerLogin": "abilgin4",
+            "createdAt": "2020-06-29T13:37:10.303Z",
+            "updatedAt": "2020-07-23T09:44:50.628Z",
+            "tags": [],
+            "classTitle": "Solid Line",
+            "points": {
+                "exterior": [
+                    [
+                        0,
+                        816
+                    ],
+                    [
+                        90,
+                        793
+                    ],
+                    [
+                        182,
+                        769
+                    ],
+                    [
+                        304,
+                        737
+                    ],
+                    [
+                        406,
+                        709
+                    ],
+                    [
+                        491,
+                        684
+                    ],
+                    [
+                        544,
+                        665
+                    ],
+                    [
+                        565,
+                        655
+                    ],
+                    [
+                        587,
+                        642
+                    ],
+                    [
+                        590,
+                        636
+                    ],
+                    [
+                        587,
+                        631
+                    ],
+                    [
+                        580,
+                        628
+                    ],
+                    [
+                        568,
+                        625
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 106054,
+            "classId": 42,
+            "description": "",
+            "geometryType": "line",
+            "labelerLogin": "abilgin4",
+            "createdAt": "2020-06-29T13:37:43.075Z",
+            "updatedAt": "2020-07-23T09:44:50.628Z",
+            "tags": [],
+            "classTitle": "Solid Line",
+            "points": {
+                "exterior": [
+                    [
+                        1920,
+                        786
+                    ],
+                    [
+                        1831,
+                        771
+                    ],
+                    [
+                        1716,
+                        751
+                    ],
+                    [
+                        1556,
+                        725
+                    ],
+                    [
+                        1380,
+                        697
+                    ],
+                    [
+                        1278,
+                        681
+                    ],
+                    [
+                        1207,
+                        670
+                    ],
+                    [
+                        1135,
+                        660
+                    ],
+                    [
+                        1060,
+                        650
+                    ],
+                    [
+                        990,
+                        641
+                    ],
+                    [
+                        931,
+                        634
+                    ],
+                    [
+                        880,
+                        629
+                    ],
+                    [
+                        840,
+                        626
+                    ],
+                    [
+                        806,
+                        623
+                    ],
+                    [
+                        771,
+                        621
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 106058,
+            "classId": 43,
+            "description": "",
+            "geometryType": "line",
+            "labelerLogin": "abilgin4",
+            "createdAt": "2020-06-29T13:38:52.644Z",
+            "updatedAt": "2020-07-23T09:44:50.628Z",
+            "tags": [],
+            "classTitle": "Dashed Line",
+            "points": {
+                "exterior": [
+                    [
+                        0,
+                        922
+                    ],
+                    [
+                        103,
+                        883
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 106059,
+            "classId": 43,
+            "description": "",
+            "geometryType": "line",
+            "labelerLogin": "abilgin4",
+            "createdAt": "2020-06-29T13:39:01.050Z",
+            "updatedAt": "2020-07-23T09:44:50.628Z",
+            "tags": [],
+            "classTitle": "Dashed Line",
+            "points": {
+                "exterior": [
+                    [
+                        575,
+                        949
+                    ],
+                    [
+                        682,
+                        822
+                    ],
+                    [
+                        720,
+                        770
+                    ],
+                    [
+                        743,
+                        734
+                    ],
+                    [
+                        757,
+                        708
+                    ],
+                    [
+                        762,
+                        689
+                    ],
+                    [
+                        761,
+                        679
+                    ],
+                    [
+                        759,
+                        668
+                    ],
+                    [
+                        757,
+                        663
+                    ],
+                    [
+                        752,
+                        656
+                    ],
+                    [
+                        748,
+                        652
+                    ],
+                    [
+                        743,
+                        648
+                    ],
+                    [
+                        738,
+                        644
+                    ],
+                    [
+                        731,
+                        640
+                    ],
+                    [
+                        723,
+                        637
+                    ],
+                    [
+                        714,
+                        633
+                    ],
+                    [
+                        706,
+                        631
+                    ],
+                    [
+                        697,
+                        629
+                    ],
+                    [
+                        690,
+                        628
+                    ],
+                    [
+                        681,
+                        627
+                    ],
+                    [
+                        674,
+                        626
+                    ],
+                    [
+                        663,
+                        624
+                    ],
+                    [
+                        657,
+                        623
+                    ],
+                    [
+                        647,
+                        622
+                    ],
+                    [
+                        639,
+                        621
+                    ],
+                    [
+                        628,
+                        620
+                    ],
+                    [
+                        620,
+                        619
+                    ],
+                    [
+                        609,
+                        618
+                    ],
+                    [
+                        601,
+                        617
+                    ],
+                    [
+                        590,
+                        616
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 106067,
+            "classId": 43,
+            "description": "",
+            "geometryType": "line",
+            "labelerLogin": "abilgin4",
+            "createdAt": "2020-06-29T13:40:41.046Z",
+            "updatedAt": "2020-07-23T09:44:50.628Z",
+            "tags": [],
+            "classTitle": "Dashed Line",
+            "points": {
+                "exterior": [
+                    [
+                        1641,
+                        979
+                    ],
+                    [
+                        1379,
+                        872
+                    ],
+                    [
+                        1277,
+                        828
+                    ],
+                    [
+                        1162,
+                        782
+                    ],
+                    [
+                        1111,
+                        758
+                    ],
+                    [
+                        1051,
+                        728
+                    ],
+                    [
+                        1024,
+                        715
+                    ],
+                    [
+                        992,
+                        703
+                    ],
+                    [
+                        968,
+                        692
+                    ],
+                    [
+                        950,
+                        683
+                    ],
+                    [
+                        936,
+                        676
+                    ],
+                    [
+                        923,
+                        668
+                    ],
+                    [
+                        909,
+                        662
+                    ],
+                    [
+                        894,
+                        657
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 106069,
+            "classId": 38,
+            "description": "",
+            "geometryType": "polygon",
+            "labelerLogin": "abilgin4",
+            "createdAt": "2020-06-29T13:41:32.148Z",
+            "updatedAt": "2020-07-23T09:44:50.628Z",
+            "tags": [],
+            "classTitle": "Freespace",
+            "points": {
+                "exterior": [
+                    [
+                        0,
+                        1208
+                    ],
+                    [
+                        0,
+                        793
+                    ],
+                    [
+                        297,
+                        722
+                    ],
+                    [
+                        448,
+                        686
+                    ],
+                    [
+                        491,
+                        673
+                    ],
+                    [
+                        520,
+                        663
+                    ],
+                    [
+                        536,
+                        657
+                    ],
+                    [
+                        547,
+                        652
+                    ],
+                    [
+                        554,
+                        647
+                    ],
+                    [
+                        558,
+                        644
+                    ],
+                    [
+                        565,
+                        639
+                    ],
+                    [
+                        571,
+                        647
+                    ],
+                    [
+                        564,
+                        658
+                    ],
+                    [
+                        561,
+                        665
+                    ],
+                    [
+                        556,
+                        670
+                    ],
+                    [
+                        552,
+                        674
+                    ],
+                    [
+                        549,
+                        688
+                    ],
+                    [
+                        549,
+                        705
+                    ],
+                    [
+                        550,
+                        739
+                    ],
+                    [
+                        661,
+                        734
+                    ],
+                    [
+                        666,
+                        731
+                    ],
+                    [
+                        698,
+                        706
+                    ],
+                    [
+                        697,
+                        668
+                    ],
+                    [
+                        695,
+                        664
+                    ],
+                    [
+                        690,
+                        660
+                    ],
+                    [
+                        689,
+                        657
+                    ],
+                    [
+                        692,
+                        656
+                    ],
+                    [
+                        691,
+                        651
+                    ],
+                    [
+                        680,
+                        650
+                    ],
+                    [
+                        664,
+                        634
+                    ],
+                    [
+                        653,
+                        633
+                    ],
+                    [
+                        589,
+                        637
+                    ],
+                    [
+                        578,
+                        642
+                    ],
+                    [
+                        571,
+                        647
+                    ],
+                    [
+                        565,
+                        639
+                    ],
+                    [
+                        567,
+                        625
+                    ],
+                    [
+                        567,
+                        622
+                    ],
+                    [
+                        566,
+                        620
+                    ],
+                    [
+                        563,
+                        618
+                    ],
+                    [
+                        557,
+                        615
+                    ],
+                    [
+                        550,
+                        613
+                    ],
+                    [
+                        538,
+                        611
+                    ],
+                    [
+                        537,
+                        609
+                    ],
+                    [
+                        554,
+                        609
+                    ],
+                    [
+                        565,
+                        610
+                    ],
+                    [
+                        633,
+                        613
+                    ],
+                    [
+                        719,
+                        615
+                    ],
+                    [
+                        780,
+                        618
+                    ],
+                    [
+                        921,
+                        626
+                    ],
+                    [
+                        1033,
+                        637
+                    ],
+                    [
+                        1235,
+                        655
+                    ],
+                    [
+                        1479,
+                        687
+                    ],
+                    [
+                        1920,
+                        744
+                    ],
+                    [
+                        1920,
+                        1208
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 215160,
+            "classId": 36,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "cuysal3",
+            "createdAt": "2020-07-23T09:44:50.504Z",
+            "updatedAt": "2020-07-23T09:44:50.504Z",
+            "tags": [],
+            "classTitle": "Traffic Sign",
+            "points": {
+                "exterior": [
+                    [
+                        708,
+                        418
+                    ],
+                    [
+                        787,
+                        491
+                    ]
+                ],
+                "interior": []
+            }
+        }
+    ]
+}

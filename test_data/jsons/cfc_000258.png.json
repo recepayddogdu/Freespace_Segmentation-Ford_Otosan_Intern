@@ -1,0 +1,291 @@
+{
+    "description": "",
+    "tags": [
+        {
+            "id": 42850,
+            "tagId": 28,
+            "name": "Scene Type",
+            "value": "No Anomaly",
+            "labelerLogin": "abilgin4",
+            "createdAt": "2020-06-29T14:57:04.384Z",
+            "updatedAt": "2020-06-29T14:57:04.384Z"
+        },
+        {
+            "id": 42854,
+            "tagId": 26,
+            "name": "Weather Condition",
+            "value": "Cloudy",
+            "labelerLogin": "abilgin4",
+            "createdAt": "2020-06-29T14:57:14.921Z",
+            "updatedAt": "2020-06-29T14:57:14.921Z"
+        },
+        {
+            "id": 42849,
+            "tagId": 25,
+            "name": "Daytime",
+            "value": "Day",
+            "labelerLogin": "abilgin4",
+            "createdAt": "2020-06-29T14:57:00.579Z",
+            "updatedAt": "2020-06-29T14:57:00.579Z"
+        },
+        {
+            "id": 42851,
+            "tagId": 27,
+            "name": "Traffic Condition",
+            "value": "Light Traffic",
+            "labelerLogin": "abilgin4",
+            "createdAt": "2020-06-29T14:57:09.398Z",
+            "updatedAt": "2020-06-29T14:57:09.398Z"
+        }
+    ],
+    "size": {
+        "height": 1208,
+        "width": 1920
+    },
+    "objects": [
+        {
+            "id": 106526,
+            "classId": 42,
+            "description": "",
+            "geometryType": "line",
+            "labelerLogin": "abilgin4",
+            "createdAt": "2020-06-29T14:57:28.624Z",
+            "updatedAt": "2020-06-29T15:03:31.658Z",
+            "tags": [],
+            "classTitle": "Solid Line",
+            "points": {
+                "exterior": [
+                    [
+                        305,
+                        1207
+                    ],
+                    [
+                        544,
+                        992
+                    ],
+                    [
+                        730,
+                        816
+                    ],
+                    [
+                        840,
+                        715
+                    ],
+                    [
+                        898,
+                        658
+                    ],
+                    [
+                        926,
+                        629
+                    ],
+                    [
+                        946,
+                        607
+                    ],
+                    [
+                        954,
+                        597
+                    ],
+                    [
+                        955,
+                        589
+                    ],
+                    [
+                        955,
+                        583
+                    ],
+                    [
+                        952,
+                        578
+                    ],
+                    [
+                        949,
+                        574
+                    ],
+                    [
+                        946,
+                        572
+                    ],
+                    [
+                        943,
+                        570
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 106535,
+            "classId": 42,
+            "description": "",
+            "geometryType": "line",
+            "labelerLogin": "abilgin4",
+            "createdAt": "2020-06-29T14:58:30.316Z",
+            "updatedAt": "2020-06-29T15:03:31.658Z",
+            "tags": [],
+            "classTitle": "Solid Line",
+            "points": {
+                "exterior": [
+                    [
+                        1686,
+                        1207
+                    ],
+                    [
+                        1526,
+                        1067
+                    ],
+                    [
+                        1368,
+                        922
+                    ],
+                    [
+                        1216,
+                        784
+                    ],
+                    [
+                        1094,
+                        675
+                    ],
+                    [
+                        1026,
+                        614
+                    ],
+                    [
+                        1007,
+                        594
+                    ],
+                    [
+                        997,
+                        586
+                    ],
+                    [
+                        989,
+                        580
+                    ],
+                    [
+                        979,
+                        574
+                    ],
+                    [
+                        970,
+                        570
+                    ],
+                    [
+                        956,
+                        565
+                    ],
+                    [
+                        944,
+                        562
+                    ],
+                    [
+                        939,
+                        561
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 106551,
+            "classId": 38,
+            "description": "",
+            "geometryType": "polygon",
+            "labelerLogin": "abilgin4",
+            "createdAt": "2020-06-29T15:03:31.433Z",
+            "updatedAt": "2020-07-23T09:46:39.421Z",
+            "tags": [],
+            "classTitle": "Freespace",
+            "points": {
+                "exterior": [
+                    [
+                        21,
+                        1208
+                    ],
+                    [
+                        646,
+                        799
+                    ],
+                    [
+                        863,
+                        660
+                    ],
+                    [
+                        926,
+                        611
+                    ],
+                    [
+                        946,
+                        592
+                    ],
+                    [
+                        949,
+                        581
+                    ],
+                    [
+                        947,
+                        574
+                    ],
+                    [
+                        938,
+                        565
+                    ],
+                    [
+                        939,
+                        564
+                    ],
+                    [
+                        939,
+                        559
+                    ],
+                    [
+                        951,
+                        562
+                    ],
+                    [
+                        968,
+                        566
+                    ],
+                    [
+                        986,
+                        570
+                    ],
+                    [
+                        1031,
+                        592
+                    ],
+                    [
+                        1076,
+                        614
+                    ],
+                    [
+                        1129,
+                        640
+                    ],
+                    [
+                        1209,
+                        677
+                    ],
+                    [
+                        1429,
+                        776
+                    ],
+                    [
+                        1793,
+                        932
+                    ],
+                    [
+                        1919,
+                        985
+                    ],
+                    [
+                        1920,
+                        1208
+                    ]
+                ],
+                "interior": []
+            }
+        }
+    ]
+}

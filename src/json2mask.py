@@ -3,9 +3,7 @@ import cv2
 import json
 import os
 import tqdm
-
-MASK_DIR = "../data/masks" #Mask'ların kaydedileceği dosya yolu.
-JSON_DIR = "../data/jsons" #Annotation dosyalarının dosya yolu.
+from constant import *
 
 if not os.path.exists(MASK_DIR): #MASK_DIR yolunda masks klasörü yoksa yeni klasör oluştur.
     os.mkdir(MASK_DIR)

@@ -2,14 +2,10 @@ import os
 import cv2
 import numpy as np
 import tqdm
+from constant import *
 
-MASK_DIR = "../data/masks"
-
-MASKED_IMAGES_DIR = "../data/masked_images"
 if not os.path.exists(MASKED_IMAGES_DIR):
     os.mkdir(MASKED_IMAGES_DIR)
-
-IMAGE_DIR = "../data/images"
 
 mask_names = os.listdir(MASK_DIR)
 # Remove hidden files if any
