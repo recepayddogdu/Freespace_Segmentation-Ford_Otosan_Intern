@@ -31,7 +31,7 @@ Unsupervised learning models, in contrast, work on their own to discover the inh
 *Bunun aksine denetimsiz öğrenme modelleri, etiketlenmemiş verilerin doğal yapısını keşfetmek için kendi başlarına çalışır.*
 
 <p  align="center">
-<img  src="images/QA1.png"  width="">
+<img  src="images/QA1.jpg"  width="">
 </p> 
 
 ### - What is Deep Learning?
