@@ -200,7 +200,7 @@ Source: [https://www.clarifai.com/blog/classification-vs-detection-vs-segmentati
 
 In a **supervised learning** model, the algorithm learns on a **labeled dataset**, providing an answer key that the algorithm can use to evaluate its accuracy on training data. An **unsupervised** model, in contrast, provides **unlabeled data** that the algorithm tries to make sense of by extracting features and patterns on its own.
 
-> Supervised → Input and label
+> Supervised → Input and label  
 Unsupervised → Input
 
 ---
