@@ -18,5 +18,7 @@ BATCH_SIZE = 4
 HEIGHT = 512
 WIDTH = 512
 
+output_shape = (HEIGHT, WIDTH)
+
 # Number of class, for this task it is 2: Non-drivable area and Driviable area
 N_CLASS = 2
