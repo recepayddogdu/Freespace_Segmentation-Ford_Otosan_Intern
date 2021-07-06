@@ -10,15 +10,15 @@ from constant import *
 from matplotlib import pyplot as plt
 import matplotlib.ticker as mticker
 from torchsummary import summary
-import tqdm
+from tqdm import tqdm_notebook
 
 ######### PARAMETERS ##########
 valid_size = 0.2 # Rate of validation dataset
 test_size  = 0.1 # Rate of test dataset
 batch_size = 4   # Number of data to be processed simultaneously in the model
 epochs = 20      # Epoch count is the number of times all training data is shown to the network during training.
-cuda = False
-input_shape = (512, 512)
+cuda = True
+input_shape = input_shape
 n_classes = 2
 ###############################
     
@@ -80,7 +80,7 @@ if __name__ == "__main__":
     train_losses=[]
     
     # TRAINING THE NEURAL NETWORK
-    for epoch in tqdm.tqdm(range(epochs)):
+    for epoch in tqdm_notebook(range(epochs)):
     
         running_loss = 0
         #In each epoch, images and masks are mixed randomly in order not to output images sequentially.
@@ -91,12 +91,12 @@ if __name__ == "__main__":
         train_input_path_list=list(zipped_list[0])
         train_label_path_list=list(zipped_list[1])
     
-        for ind in range(steps_per_epoch):
-            batch_input_path_list = test_input_path_list[batch_size*ind:batch_size*(ind+1)]
+        for ind in tqdm_notebook(range(steps_per_epoch), leave=False):
+            batch_input_path_list = train_input_path_list[batch_size*ind:batch_size*(ind+1)]
             #train_input_path_list [0: 4] gets first 4 elements on first entry
             #in the second loop train_input_list [4: 8] gets the second 4 elements
             #element advances each time until batch_size
-            batch_label_path_list = test_label_path_list[batch_size*ind:batch_size*(ind+1)]
+            batch_label_path_list = train_label_path_list[batch_size*ind:batch_size*(ind+1)]
             batch_input = tensorize_image(batch_input_path_list, input_shape, cuda)
             batch_label = tensorize_mask(batch_label_path_list, input_shape, n_classes, cuda)
     
@@ -110,7 +110,7 @@ if __name__ == "__main__":
             optimizer.step() # Updates each parameter according to the gradient
     
             running_loss += loss.item() # loss.item() takes the scalar value held in loss.
-            print(ind)
+            #print(ind)
             
             ### VALIDATION ###
             if ind == steps_per_epoch-1:
@@ -126,7 +126,7 @@ if __name__ == "__main__":
                     val_losses.append(val_loss)
                     break
     
-                print('validation loss on epoch {}: {}'.format(epoch, val_loss))
+                print('validation loss on epoch {}: {}\n'.format(epoch, val_loss))
     
     def save_model(model, model_name, val_losses, train_losses, epochs):
         if not os.path.exists(MODELS_DIR):
@@ -136,10 +136,10 @@ if __name__ == "__main__":
         print("Model Saved!")
         
         # DRAW GRAPH
-        #norm_validation = [float(i)/sum(val_losses) for i in val_losses]
-        #norm_train = [float(i)/sum(train_losses) for i in train_losses]
-        norm_validation = val_losses
-        norm_train = train_losses
+        norm_validation = [float(i)/sum(val_losses) for i in val_losses]
+        norm_train = [float(i)/sum(train_losses) for i in train_losses]
+        #norm_validation = val_losses
+        #norm_train = train_losses
         epoch_numbers=list(range(1,epochs+1,1))
         plt.figure(figsize=(12,6))
         plt.subplot(2, 2, 1)
@@ -160,44 +160,6 @@ if __name__ == "__main__":
         plt.savefig(os.path.join(MODELS_DIR, model_name.split(".")[0]+"-loss.png"))
         plt.show()
         
-    save_model(model, model_name, val_losses, train_losses, epochs)
+    save_model(model, "Unet_1-(shape-512)", val_losses, train_losses, epochs)
 
     #summary(model, input_shape)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

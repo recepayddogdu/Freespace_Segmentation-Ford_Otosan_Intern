@@ -115,6 +115,7 @@ def one_hot_encoder(data, n_class):
 
 if __name__=="__main__":
     
+    
     # Access images
     image_list = glob.glob(os.path.join(IMAGE_DIR, '*'))
     image_list.sort()
@@ -126,9 +127,10 @@ if __name__=="__main__":
     # Check image-mask match
     if image_mask_check(image_list, mask_list):
         
+        
         # Take image to number of batch size
         batch_image_list = image_list[:BATCH_SIZE]
-        
+        global batch_image_tensor
         # Convert into torch tensor
         batch_image_tensor = tensorize_image(batch_image_list, output_shape)
         
