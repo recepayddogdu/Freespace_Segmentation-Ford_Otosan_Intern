@@ -7,12 +7,13 @@ Created on Fri Jul  2 01:19:41 2021
 """
 import os
 
-IMAGE_DIR = "../test_data/images"
-MASK_DIR = "../test_data/masks" #Mask'ların kaydedileceği dosya yolu.
-JSON_DIR = "../test_data/jsons" #Annotation dosyalarının dosya yolu.
-MASKED_IMAGES_DIR = "../test_data/masked_images"
-MODELS_DIR = "../models/"
-
+DATA_DIR = "../data"
+IMAGE_DIR = os.path.join(DATA_DIR, "images")
+MASK_DIR = os.path.join(DATA_DIR, "masks") #Mask'ların kaydedileceği dosya yolu.
+JSON_DIR = os.path.join(DATA_DIR, "jsons") #Annotation dosyalarının dosya yolu.
+MASKED_IMAGES_DIR = os.path.join(DATA_DIR, "masked_images")
+MODELS_DIR = "../test_models"
+PREDICT_DIR = os.path.join(DATA_DIR, "predicts")
     
 BATCH_SIZE = 4
 
