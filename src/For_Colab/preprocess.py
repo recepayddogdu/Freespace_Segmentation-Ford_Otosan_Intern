@@ -2,7 +2,7 @@ import glob
 import cv2
 import torch
 import numpy as np
-#from constant import *
+from constant import *
 
 def tensorize_image(image_path_list, output_shape, cuda=False):
     batch_images = [] # Create empty list
@@ -11,7 +11,10 @@ def tensorize_image(image_path_list, output_shape, cuda=False):
     
         img = cv2.imread(image_path) # Access and read image
         
-        img = cv2.resize(img, output_shape, interpolation = cv2.INTER_NEAREST) # Resize the image according to defined shape
+        zeros_img = np.zeros((1920, 1208))
+        norm_img = cv2.normalize(img, zeros_img, 0, 255, cv2.NORM_MINMAX)
+        
+        img = cv2.resize(norm_img, output_shape, interpolation = cv2.INTER_NEAREST) # Resize the image according to defined shape
         
         # Change input structure according to pytorch input structure
         torchlike_image = torchlike_data(img)
@@ -115,6 +118,7 @@ def one_hot_encoder(data, n_class):
 
 if __name__=="__main__":
     
+    
     # Access images
     image_list = glob.glob(os.path.join(IMAGE_DIR, '*'))
     image_list.sort()
@@ -126,9 +130,10 @@ if __name__=="__main__":
     # Check image-mask match
     if image_mask_check(image_list, mask_list):
         
+        
         # Take image to number of batch size
         batch_image_list = image_list[:BATCH_SIZE]
-        
+        global batch_image_tensor
         # Convert into torch tensor
         batch_image_tensor = tensorize_image(batch_image_list, output_shape)
         
@@ -149,25 +154,3 @@ if __name__=="__main__":
         print("Type is "+str(type(batch_mask_tensor)))
         print("The size should be ["+str(BATCH_SIZE)+", 2, "+str(HEIGHT)+", "+str(WIDTH)+"]")
         print("Size is "+str(batch_mask_tensor.shape))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

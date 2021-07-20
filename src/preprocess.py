@@ -11,7 +11,10 @@ def tensorize_image(image_path_list, output_shape, cuda=False):
     
         img = cv2.imread(image_path) # Access and read image
         
-        img = cv2.resize(img, output_shape, interpolation = cv2.INTER_NEAREST) # Resize the image according to defined shape
+        zeros_img = np.zeros((1920, 1208))
+        norm_img = cv2.normalize(img, zeros_img, 0, 255, cv2.NORM_MINMAX)
+        
+        img = cv2.resize(norm_img, output_shape, interpolation = cv2.INTER_NEAREST) # Resize the image according to defined shape
         
         # Change input structure according to pytorch input structure
         torchlike_image = torchlike_data(img)
@@ -151,25 +154,3 @@ if __name__=="__main__":
         print("Type is "+str(type(batch_mask_tensor)))
         print("The size should be ["+str(BATCH_SIZE)+", 2, "+str(HEIGHT)+", "+str(WIDTH)+"]")
         print("Size is "+str(batch_mask_tensor.shape))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
