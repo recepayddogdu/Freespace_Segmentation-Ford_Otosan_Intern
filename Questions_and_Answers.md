@@ -2,45 +2,45 @@
 
 ## Contents
 ### Fundamentals
-- [What is Machine Learning?](#--What-is-Machine-Learning?)
-- [What is Unsupervised vs Supervised learning difference?](#--What-is-Unsupervised-vs-Supervised-learning-difference?)
-- [What is Deep Learning?](#--What-is-Deep-Learning?)
-- [What is Neural Network (NN)?](#--What-is-Neural-Network-(NN)?)
-- [What is Convolution Neural Network (CNN)? Please give 2 advantages over NN.](#--What-is-Convolution-Neural-Network-(CNN)?-Please-give-2-advantages-over-NN.)
-- [What is segmentation task in NN? Is it supervised or unsupervised?](#--What-is-segmentation-task-in-NN?-Is-it-supervised-or-unsupervised?)
-- [What is classification task in NN? Is it supervised or unsupervised?](#--What-is-classification-task-in-NN?-Is-it-supervised-or-unsupervised?)
-- [Compare segmentation and classification in NN.](#--Compare-segmentation-and-classification-in-NN.)
-- [What is data and dataset difference?](#--What-is-data-and-dataset-difference?)
-- [What is the difference between supervised and unsupervised learning in terms of dataset?](#--What-is-the-difference-between-supervised-and-unsupervised-learning-in-terms-of-dataset?)
+- [What is Machine Learning?](#--what-is-machine-learning)
+- [What is Unsupervised vs Supervised learning difference?](#--what-is-unsupervised-vs-supervised-learning-difference)
+- [What is Deep Learning?](#--what-is-deep-learning)
+- [What is Neural Network (NN)?](#--what-is-neural-network-nn)
+- [What is Convolution Neural Network (CNN)? Please give 2 advantages over NN.](#--what-is-convolution-neural-network-cnn-please-give-2-advantages-over-nn)
+- [What is segmentation task in NN? Is it supervised or unsupervised?](#--what-is-segmentation-task-in-nn-is-it-supervised-or-unsupervised)
+- [What is classification task in NN? Is it supervised or unsupervised?](#--what-is-classification-task-in-nn-is-it-supervised-or-unsupervised)
+- [Compare segmentation and classification in NN.](#--compare-segmentation-and-classification-in-nn)
+- [What is data and dataset difference?](#--what-is-data-and-dataset-difference)
+- [What is the difference between supervised and unsupervised learning in terms of dataset?](#--what-is-the-difference-between-supervised-and-unsupervised-learning-in-terms-of-dataset)
 
 ### Data Preprocessing
 **Extracting Masks**
-- [What is color space?](#--What-is-color-space?)
-- [What RGB stands for?](#--What-RGB-stands-for?)
-- [In Python, can we transform from one color space to another?](#--In-Python,-can-we-transform-from-one-color-space-to-another?)
-- [What is the popular library for image processing?](#--What-is-the-popular-library-for-image-processing?)
+- [What is color space?](#--what-is-color-space)
+- [What RGB stands for?](#--what-rgb-stands-for)
+- [In Python, can we transform from one color space to another?](#--in-python-can-we-transform-from-one-color-space-to-another)
+- [What is the popular library for image processing?](#--what-is-the-popular-library-for-image-processing)
 
 **Converting into Tensor**
-- [Computational Graph](#--Computational-Graph)
-- [What is Tensor?](#--What-is-Tensor?)
-- [One Hot Encoding](#--One-Hot-Encoding)
-- [What is CUDA programming?](#--What-is-CUDA-programming?)
+- [Computational Graph](#--computational-graph)
+- [What is Tensor?](#--what-is-tensor)
+- [One Hot Encoding](#--one-hot-encoding)
+- [What is CUDA programming?](#--what-is-cuda-programming)
 
 ### Design Segmentation Model
-- [What is the difference between CNN and Fully CNN (FCNN)?](#--What-is-the-difference-between-CNN-and-Fully-CNN-(FCNN)-?)
-- [What are the different layers on CNN?](#--What-are-the-different-layers-on-CNN?)
-- [What is activation function ? Why is softmax usually used in the last layer?](#--What-is-activation-function-?-Why-is-softmax-usually-used-in-the-last-layer?)
+- [What is the difference between CNN and Fully CNN (FCNN)?](#--what-is-the-difference-between-cnn-and-fully-cnn-fcnn-)
+- [What are the different layers on CNN?](#--what-are-the-different-layers-on-cnn)
+- [What is activation function ? Why is softmax usually used in the last layer?](#--what-is-activation-function--why-is-softmax-usually-used-in-the-last-layer)
 
 ### Train
-- [What is parameter and hyper-parameter in NN ?](#--What-is-parameter-and-hyper-parameter-in-NN-?)
-- [Validation Set](#--Validation-Set)
-- [What is an epoch?](#--What-is-an-epoch?)
-- [What is batch?](#--What-is-batch?)
-- [What is iteration?](#--What-is-iteration?)
-- [What is Cost Function?](#--What-is-Cost-Function?)
-- [What is/are the purpose(s) of an optimizer in NN?](#--What-is/are-the-purpose(s)-of-an-optimizer-in-NN?)
-- [What is Batch Gradient Descent & Stochastic Gradient Descent?](#--What-is-Batch-Gradient-Descent-&-Stochastic-Gradient-Descent?)
-- [What is Backpropogation? What is used for?](#--What-is-Backpropogation-?-What-is-used-for-?)
+- [What is parameter and hyper-parameter in NN ?](#--what-is-parameter-and-hyper-parameter-in-nn-)
+- [Validation Set](#--validation-dataset)
+- [What is an epoch?](#--what-is-an-epoch)
+- [What is batch?](#--what-is-batch)
+- [What is iteration?](#--what-is-iteration)
+- [What is Cost Function?](#--what-is-the-cost-function)
+- [What is/are the purpose(s) of an optimizer in NN?](#--what-isare-the-purposes-of-an-optimizer-in-nn)
+- [What is Batch Gradient Descent & Stochastic Gradient Descent?](#--what-is-batch-gradient-descent--stochastic-gradient-descent)
+- [What is Backpropogation? What is used for?](#--what-is-backpropogation--what-is-used-for-)
 ---
 
 
