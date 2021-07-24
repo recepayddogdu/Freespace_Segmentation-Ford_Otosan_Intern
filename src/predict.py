@@ -2,6 +2,7 @@ import os
 import glob
 import torch
 import tqdm
+import cv2
 from tqdm import tqdm_notebook
 from preprocess import tensorize_image
 import numpy as np
@@ -13,7 +14,7 @@ if not os.path.exists(PREDICT_DIR): #PREDICT_DIR yolunda predicts klasörü yoks
 
 #### PARAMETERS #####
 cuda = True
-model_name = "Unet_1.pt"
+model_name = "Unet_2.pt"
 
 predict_path = os.path.join(PREDICT_DIR, model_name.split(".")[0])
 if not os.path.exists(predict_path): #predict_path yolunda predicts klasörü yoksa yeni klasör oluştur.
@@ -42,7 +43,7 @@ def predict(model, images):
         batch_test = tensorize_image([image], input_shape, cuda)
         output = model(batch_test)
         out = torch.argmax(output, axis=1)
-        
+
         
         out = out.cpu()
         
@@ -50,7 +51,7 @@ def predict(model, images):
         mask = np.squeeze(outputs_list, axis=0)
        
         mask_uint8 = mask.astype('uint8')
-        mask_resize = cv2.resize(mask_uint8, (1920, 1208), interpolation = cv2.INTER_AREA)
+        mask_resize = cv2.resize(mask_uint8, (1920, 1208), interpolation = cv2.INTER_CUBIC)
         
         img = cv2.imread(image)
         img_resize = cv2.resize(img, input_shape)
@@ -60,8 +61,8 @@ def predict(model, images):
         img[mask_resize==1, :] = (255, 0, 125)
         opac_image = (img/2 + copy_img/2).astype(np.uint8)
         cv2.imwrite(os.path.join(predict_path, image.split("/")[-1]), opac_image)
-        print("mask size from model: ", mask.shape),
-        print("resized mask size: ", mask_resize.shape)
+        #print("mask size from model: ", mask.shape),
+        #print("resized mask size: ", mask_resize.shape)
+
 if __name__ == "__main__":
     predict(model, test_input_path_list)
-    

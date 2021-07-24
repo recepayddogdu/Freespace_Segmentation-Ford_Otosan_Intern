@@ -1,4 +1,4 @@
-from model import FoInternNet
+from Unet_1 import FoInternNet
 from preprocess import tensorize_image, tensorize_mask, image_mask_check
 import os
 import glob
@@ -13,7 +13,7 @@ from torchsummary import summary
 from tqdm import tqdm_notebook
 
 ######### PARAMETERS ##########
-valid_size = 0.2 # Rate of validation dataset
+valid_size = 0.3 # Rate of validation dataset
 test_size  = 0.1 # Rate of test dataset
 batch_size = 4   # Number of data to be processed simultaneously in the model
 epochs = 20      # Epoch count is the number of times all training data is shown to the network during training.
@@ -68,7 +68,7 @@ if __name__ == "__main__":
     
     # DEFINE LOSS FUNCTION AND OPTIMIZER
     criterion = nn.BCELoss() #Creates a criterion that measures the Binary Cross Entropy between target and output:
-    optimizer = optim.SGD(model.parameters(), lr=0.001, momentum=0.9) #Commonly used momentum beta coefficient is 0.9
+    optimizer = optim.Adam(model.parameters(), lr=0.001) #Commonly used momentum beta coefficient is 0.9
     # lr = Learning Rate
     
     # IF CUDA IS USED, IMPORT THE MODEL INTO CUDA

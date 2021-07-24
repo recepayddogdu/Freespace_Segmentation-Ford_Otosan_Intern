@@ -1,4 +1,4 @@
-from model import FoInternNet
+from Unet_1 import FoInternNet
 from preprocess import tensorize_image, tensorize_mask, image_mask_check
 import os
 import glob
@@ -13,10 +13,10 @@ from torchsummary import summary
 from tqdm import tqdm_notebook
 
 ######### PARAMETERS ##########
-valid_size = 0.2 # Rate of validation dataset
+valid_size = 0.3 # Rate of validation dataset
 test_size  = 0.1 # Rate of test dataset
 batch_size = 4   # Number of data to be processed simultaneously in the model
-epochs = 20      # Epoch count is the number of times all training data is shown to the network during training.
+epochs = 30      # Epoch count is the number of times all training data is shown to the network during training.
 cuda = True
 input_shape = input_shape
 n_classes = 2
@@ -68,7 +68,7 @@ if __name__ == "__main__":
     
     # DEFINE LOSS FUNCTION AND OPTIMIZER
     criterion = nn.BCELoss() #Creates a criterion that measures the Binary Cross Entropy between target and output:
-    optimizer = optim.SGD(model.parameters(), lr=0.001, momentum=0.9) #Commonly used momentum beta coefficient is 0.9
+    optimizer = optim.Adam(model.parameters(), lr=0.001) #Commonly used momentum beta coefficient is 0.9
     # lr = Learning Rate
     
     # IF CUDA IS USED, IMPORT THE MODEL INTO CUDA
@@ -156,10 +156,10 @@ if __name__ == "__main__":
         plt.legend(['w=1','w=2'])
         plt.title('Train and Validation Losses')
         plt.gca().xaxis.set_major_locator(mticker.MultipleLocator(1))
-        
+        plt.tight_layout()
         plt.savefig(os.path.join(MODELS_DIR, model_name.split(".")[0]+"-loss.png"))
         plt.show()
         
-    save_model(model, "Unet_1-(shape-512)", val_losses, train_losses, epochs)
+    save_model(model, "Unet_2", val_losses, train_losses, epochs)
 
     #summary(model, input_shape)
