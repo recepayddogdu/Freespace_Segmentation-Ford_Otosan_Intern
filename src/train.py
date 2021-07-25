@@ -20,6 +20,7 @@ epochs = 30      # Epoch count is the number of times all training data is shown
 cuda = True
 input_shape = input_shape
 n_classes = 2
+augmentation = True
 ###############################
     
 # PREPARE IMAGE AND MASK LISTS
@@ -28,6 +29,8 @@ image_path_list.sort()
 # The names of the files in the IMAGE_DIR path are listed and sorted
 mask_path_list = glob.glob(os.path.join(MASK_DIR, "*"))
 mask_path_list.sort()
+
+
 
 # DATA CHECK
 image_mask_check(image_path_list, mask_path_list)
@@ -56,6 +59,18 @@ valid_label_path_list = mask_path_list[test_ind:valid_ind]  #Get 855 to 1711 ele
 # SLICE TRAIN DATASET FROM THE WHOLE DATASET
 train_input_path_list = image_path_list[valid_ind:] #Get the elements of the image_path_list from 1711 to the last element = 6844 elements
 train_label_path_list = mask_path_list[valid_ind:]  #Get the elements of the mask_path_list from 1711 to the last element = 6844 elements
+
+if augmentation:
+    # PREPARE AUGMENTATED IMAGE AND MASK LISTS
+    aug_image_list = glob.glob(os.path.join(AUG_IMAGE_DIR, "*"))
+    aug_image_list.sort()
+    aug_mask_list = glob.glob(os.path.join(AUG_MASK_DIR, "*"))
+    aug_mask_list.sort()
+    
+    aug_size = int(len(aug_mask_list)/2)
+    
+    train_input_path_list = aug_image_list[:aug_size] + train_input_path_list + aug_image_list[aug_size:]
+    train_label_path_list = aug_mask_list[:aug_size] + train_label_path_list + aug_mask_list[aug_size:]
 
 
 if __name__ == "__main__":
