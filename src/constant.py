@@ -20,8 +20,8 @@ AUG_MASK_DIR = os.path.join(DATA_DIR, "aug_mask")
 BATCH_SIZE = 4
 
 #Input Dimensions
-HEIGHT = 512
-WIDTH = 512
+HEIGHT = 224
+WIDTH = 224
 
 output_shape = (HEIGHT, WIDTH)
 input_shape = (HEIGHT, WIDTH)

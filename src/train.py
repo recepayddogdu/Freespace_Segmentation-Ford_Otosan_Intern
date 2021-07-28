@@ -16,11 +16,14 @@ from tqdm import tqdm_notebook
 valid_size = 0.3 # Rate of validation dataset
 test_size  = 0.1 # Rate of test dataset
 batch_size = 4   # Number of data to be processed simultaneously in the model
-epochs = 30      # Epoch count is the number of times all training data is shown to the network during training.
+epochs = 25      # Epoch count is the number of times all training data is shown to the network during training.
 cuda = True
 input_shape = input_shape
 n_classes = 2
 augmentation = True
+checkpoint = False
+model_name = "Unet_2-augmentation"
+cp_epoch = 0
 ###############################
     
 # PREPARE IMAGE AND MASK LISTS
@@ -29,8 +32,6 @@ image_path_list.sort()
 # The names of the files in the IMAGE_DIR path are listed and sorted
 mask_path_list = glob.glob(os.path.join(MASK_DIR, "*"))
 mask_path_list.sort()
-
-
 
 # DATA CHECK
 image_mask_check(image_path_list, mask_path_list)
@@ -72,6 +73,26 @@ if augmentation:
     train_input_path_list = aug_image_list[:aug_size] + train_input_path_list + aug_image_list[aug_size:]
     train_label_path_list = aug_mask_list[:aug_size] + train_label_path_list + aug_mask_list[aug_size:]
 
+def save_checkpoint(epoch, model, optimizer, val_loss, model_name):
+  if not os.path.exists(MODELS_DIR):
+    os.mkdir(MODELS_DIR)
+  model_name += "-checkpoint-"+str(epoch)+".pt"
+  
+  torch.save({
+              "epoch": epoch,
+              "model_state_dict": model.state_dict(),
+              "optimizer_state_dict": optimizer.state_dict(),
+              #"loss": val_loss                  
+              }, os.path.join(MODELS_DIR, model_name))
+  os.system("zip -r models.zip models")
+  os.system("cp models.zip /content/drive/MyDrive/InternP1")
+  print("Checkpoint Saved!")
+
+def load_checkpoint(model, optimizer, model_name, cp_epoch):
+  checkpoint = torch.load(os.path.join(MODELS_DIR, model_name+"-checkpoint-"+str(cp_epoch)+".pt"))
+  model.load_state_dict(checkpoint["model_state_dict"])
+  optimizer.load_state_dict(checkpoint["optimizer_state_dict"])
+  #epoch_cp = checkpoint["epoch"]
 
 if __name__ == "__main__":
     
@@ -93,7 +114,13 @@ if __name__ == "__main__":
     
     val_losses=[]
     train_losses=[]
-    
+
+    if checkpoint:
+      load_checkpoint(model, optimizer, model_name, cp_epoch)
+      epochs = epochs - (cp_epoch+1)
+      val_losses = val_losses_cp
+      train_losses = train_losses_cp
+
     # TRAINING THE NEURAL NETWORK
     for epoch in tqdm_notebook(range(epochs)):
     
@@ -123,7 +150,7 @@ if __name__ == "__main__":
             loss = criterion(outputs, batch_label)
             loss.backward() # Calculates the gradient, how much each parameter needs to be updated
             optimizer.step() # Updates each parameter according to the gradient
-    
+            
             running_loss += loss.item() # loss.item() takes the scalar value held in loss.
             #print(ind)
             
@@ -131,6 +158,7 @@ if __name__ == "__main__":
             if ind == steps_per_epoch-1:
                 train_losses.append(running_loss)
                 print('training loss on epoch {}: {}'.format(epoch, running_loss))
+                
                 val_loss = 0
                 for (valid_input_path, valid_label_path) in zip(valid_input_path_list, valid_label_path_list):
                     batch_input = tensorize_image([valid_input_path], input_shape, cuda)
@@ -142,7 +170,9 @@ if __name__ == "__main__":
                     break
     
                 print('validation loss on epoch {}: {}\n'.format(epoch, val_loss))
-    
+
+                save_checkpoint(epoch, model, optimizer, val_loss, model_name)
+
     def save_model(model, model_name, val_losses, train_losses, epochs):
         if not os.path.exists(MODELS_DIR):
             os.mkdir(MODELS_DIR)
@@ -155,7 +185,7 @@ if __name__ == "__main__":
         norm_train = [float(i)/sum(train_losses) for i in train_losses]
         #norm_validation = val_losses
         #norm_train = train_losses
-        epoch_numbers=list(range(1,epochs+1,1))
+        epoch_numbers=list(range(1,epochs,1))
         plt.figure(figsize=(12,6))
         plt.subplot(2, 2, 1)
         plt.plot(epoch_numbers,norm_validation,color="red") 
@@ -174,7 +204,7 @@ if __name__ == "__main__":
         plt.tight_layout()
         plt.savefig(os.path.join(MODELS_DIR, model_name.split(".")[0]+"-loss.png"))
         plt.show()
-        
-    save_model(model, "Unet_2", val_losses, train_losses, epochs)
+
+    save_model(model, model_name, val_losses, train_losses, epochs)
 
     #summary(model, input_shape)

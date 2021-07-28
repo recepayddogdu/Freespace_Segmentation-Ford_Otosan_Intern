@@ -1,3 +1,10 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Jul  2 01:19:41 2021
+
+@author: recepaydogdu
+"""
 import os
 
 DATA_DIR = "data"
@@ -7,8 +14,10 @@ JSON_DIR = os.path.join(DATA_DIR, "jsons") #Annotation dosyalarının dosya yolu
 MASKED_IMAGES_DIR = os.path.join(DATA_DIR, "masked_images")
 MODELS_DIR = "models"
 PREDICT_DIR = os.path.join(DATA_DIR, "predicts")
-    
-BATCH_SIZE = 8
+AUG_IMAGE_DIR = os.path.join(DATA_DIR, "aug_image")
+AUG_MASK_DIR = os.path.join(DATA_DIR, "aug_mask")    
+
+BATCH_SIZE = 4
 
 #Input Dimensions
 HEIGHT = 224
