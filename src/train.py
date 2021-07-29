@@ -9,7 +9,7 @@ import torch.optim as optim
 from constant import *
 from matplotlib import pyplot as plt
 import matplotlib.ticker as mticker
-from torchsummary import summary
+#from torchsummary import summary
 from tqdm import tqdm_notebook
 
 ######### PARAMETERS ##########
