@@ -19,7 +19,8 @@ for json_name in tqdm.tqdm(jsons):
     mask = np.zeros((json_dict["size"]["height"], json_dict["size"]["width"]), dtype=np.uint8)
     #Json dosyasındaki size'a göre zeros matrisi oluştur
     
-    mask_path = os.path.join(MASK_DIR, json_name[:-5]) #json_name'in sonundaki .json uzantısını silip yeni path oluştur
+    mask_path = os.path.join(MASK_DIR, json_name[:-5]) 
+    #json_name'in sonundaki .json uzantısını silip yeni path oluştur
     
     
     for obj in json_dict["objects"]:
@@ -33,3 +34,6 @@ for json_name in tqdm.tqdm(jsons):
                     cv2.fillPoly(mask, np.array([interior], dtype=np.int32), color=0)
 
     cv2.imwrite(mask_path, mask.astype(np.uint8))
+
+
+    
