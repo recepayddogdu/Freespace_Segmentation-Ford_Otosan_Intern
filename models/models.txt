@@ -1,0 +1,15 @@
+**Unet_1**											
+valid_size = 0.2	
+									
+optimizer = optim.SGD(model.parameters(), lr=0.001, momentum=0.9)
+
+
+
+**Unet_2**
+valid_size = 0.3
+
+optimizer = optim.Adam(model.parameters(), lr=0.001)
+
+**Unet_3**
+Augmentation;
+	- 
