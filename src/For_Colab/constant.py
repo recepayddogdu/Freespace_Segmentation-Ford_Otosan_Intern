@@ -16,6 +16,8 @@ MODELS_DIR = "models"
 PREDICT_DIR = os.path.join(DATA_DIR, "predicts")
 AUG_IMAGE_DIR = os.path.join(DATA_DIR, "aug_image")
 AUG_MASK_DIR = os.path.join(DATA_DIR, "aug_mask")    
+TEST_DIR = os.path.join(DATA_DIR, "test")
+TEST_PREDICT_DIR = os.path.join(DATA_DIR, "test_predicts")
 
 BATCH_SIZE = 4
 
