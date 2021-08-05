@@ -16,10 +16,6 @@ if not os.path.exists(PREDICT_DIR): #PREDICT_DIR yolunda predicts klasörü yoks
 cuda = True
 test = True
 model_name = "Unet_2.pt"
-
-
-
-
 model_path = os.path.join(MODELS_DIR, model_name)
 input_shape = input_shape
 #####################
@@ -49,6 +45,7 @@ def predict(model, images):
 
 
     for image in tqdm_notebook(images):
+        img = cv2.imread(image)
         batch_test = tensorize_image([image], input_shape, cuda)
         output = model(batch_test)
         out = torch.argmax(output, axis=1)
@@ -60,9 +57,9 @@ def predict(model, images):
         mask = np.squeeze(outputs_list, axis=0)
        
         mask_uint8 = mask.astype('uint8')
-        mask_resize = cv2.resize(mask_uint8, (1920, 1208), interpolation = cv2.INTER_CUBIC)
+        mask_resize = cv2.resize(mask_uint8, ((img.shape[1]), (img.shape[0])), interpolation = cv2.INTER_CUBIC)
         
-        img = cv2.imread(image)
+        
         img_resize = cv2.resize(img, input_shape)
         mask_ind = mask_resize == 1
         #copy_img = img_resize.copy()
