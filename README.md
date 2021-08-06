@@ -2,5 +2,5 @@
 Drivable area detection in highway images with semantic segmentation.
 
 <p  align="center">
-<img  src="images/predict-text_large.gif"  width="">
+<img  src="images/predict_wlogo.gif"  width="">
 </p> 
