@@ -9,4 +9,4 @@ Below are the image used while testing the model, the expected output from the m
 <img  src="images/predict_wlogo.gif"  width="">
 </p> 
 
-
+[Click here](/Questions_and_Answers.md) for the question and answer page that includes basic information about semantic segmentation and deep learning.
