@@ -9,7 +9,7 @@ Below are the image used while testing the model, the expected output from the m
 <img  src="images/predict_wlogo.gif"  width="">
 </p> 
 
-[Click here](/Questions_and_Answers.md) for the question and answer page that includes basic information about semantic segmentation and deep learning.
+**[Click here](/Questions_and_Answers.md) for the question and answer page that includes basic information about semantic segmentation and deep learning.**
 
 ## Parts of the project;
 - [Json to Mask](#json-to-mask)
@@ -21,7 +21,7 @@ Below are the image used while testing the model, the expected output from the m
 - [Predict](#predict)
 
 ## Json to Mask
-JSON files are obtained as a result of highway images tagged by Ford Otosan Data Annotation Team. The JSON files contain the exterior and interior point locations of the freespace (drivable area) class. 
+JSON files are obtained as a result of highway images tagged by Ford Otosan Annotation Team. The JSON files contain the exterior and interior point locations of the freespace (drivable area) class. 
 
 The file structure is as follows;
 
