@@ -10,3 +10,22 @@ Below are the image used while testing the model, the expected output from the m
 </p> 
 
 [Click here](/Questions_and_Answers.md) for the question and answer page that includes basic information about semantic segmentation and deep learning.
+
+## Parts of the project;
+- 
+
+## Json to Mask
+
+## Mask on Image
+
+## Preprocess
+
+## Model
+
+## Train
+
+## Data Augmentation
+
+## Predict
+
+
