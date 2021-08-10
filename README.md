@@ -46,7 +46,24 @@ Mask example;
 <img  src="images/json2mask.png"  width="">
 </p> 
 
+**Click for the codes of this section; [json2mask.py](src/json2mask.py)**
+
 ## Mask on Image
+
+In this section, masks obtained from JSON files were added on the images and tested whether the masks were correct.
+
+Adding on the image by coloring the pixels designated as freespace and with 50% opacity:
+
+    image[mask==100, :] = (255, 0, 125)
+    opac_image = (image/2 + cpy_image/2).astype(np.uint8)
+
+Mask on image example:
+
+<p  align="center">
+<img  src="images/maskonimage.png"  width="">
+</p>
+
+**Click for the codes of this section; [mask_on_image.py](src/mask_on_image.py)**
 
 ## Preprocess
 
