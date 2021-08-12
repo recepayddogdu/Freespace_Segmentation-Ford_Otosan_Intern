@@ -43,6 +43,10 @@ The `fillPoly` function from the cv2 library was used to draw the masks.
 
 Mask example;
 <p  align="center">
+<img  src="images/mask_array.png"  width="">
+</p> 
+
+<p  align="center">
 <img  src="images/json2mask.png"  width="">
 </p> 
 
@@ -66,6 +70,10 @@ Mask on image example:
 **Click for the codes of this section; [mask_on_image.py](src/mask_on_image.py)**
 
 ## Preprocess
+
+The images and masks refer to "features" and "labels" for Segmentation. To feed them into the Segmentation model, which will be written in PyTorch, we need to format them appropriately.
+
+
 
 ## Model
 

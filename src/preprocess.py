@@ -101,7 +101,7 @@ def torchlike_data(data):
 
 
 def one_hot_encoder(data, n_class):
-    
+    global one_hot
     #one hot encode
     #Create an np.array of zeros.
     one_hot=np.zeros((data.shape[0],data.shape[1],n_class),dtype=np.int)
