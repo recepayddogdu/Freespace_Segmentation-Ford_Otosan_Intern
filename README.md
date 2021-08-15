@@ -283,6 +283,11 @@ Examples of augmented data;
 </p>
 
 Predicted images;
+
+<p  align="center">
+<img  src="images/after-augmentation.png"  width="">
+</p>
+
 <p  align="center">
 <img  src="images/predict.png"  width="">
 </p>
