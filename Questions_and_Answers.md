@@ -329,7 +329,7 @@ A computational graph is defined as a directed graph where the nodes correspond 
 
 For example, here is a simple mathematical equation; 
 
-$p = x + y$
+p = x + y
 
 We can draw a computational graph of the above equation as follows.
 
@@ -345,7 +345,7 @@ Source: [https://www.tutorialspoint.com/python_deep_learning/python_deep_learnin
 
 *Örneğin, burada basit bir matematiksel denklem;*  
 
-$p = x + y$
+p = x + y
 
 *Yukarıdaki denklemin hesaplama grafiğini aşağıdaki gibi çizebiliriz.*
 
