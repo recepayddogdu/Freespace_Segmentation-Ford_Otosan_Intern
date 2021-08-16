@@ -86,6 +86,13 @@ Mask on image example:
 
 **Click for the codes of this section; [mask_on_image.py](src/mask_on_image.py)**
 
+**You can review my notes, which contain basic information about Json to Mask and Mask on Image topics, under the following headings;**
+
+- [What is color space?](/Questions_and_Answers.md#--what-is-color-space)
+- [What RGB stands for?](/Questions_and_Answers.md#--what-rgb-stands-for)
+- [In Python, can we transform from one color space to another?](/Questions_and_Answers.md#--in-python-can-we-transform-from-one-color-space-to-another)
+- [What is the popular library for image processing?](/Questions_and_Answers.md#--what-is-the-popular-library-for-image-processing)
+
 ## Preprocess
 
 The images and masks refer to "features" and "labels" for Segmentation. To feed them into the Segmentation model, which will be written in PyTorch, we need to format them appropriately.
@@ -123,6 +130,12 @@ One Hot Encoder output;
 </p>
 
 **Click for the codes of this section; [preprocess.py](src/preprocess.py)**
+
+**You can review my notes, which contain basic information about Preprocess, under the following headings;**
+- [Computational Graph](/Questions_and_Answers.md#--computational-graph)
+- [What is Tensor?](/Questions_and_Answers.md#--what-is-tensor)
+- [One Hot Encoding](/Questions_and_Answers.md#--one-hot-encoding)
+- [What is CUDA programming?](/Questions_and_Answers.md#--what-is-cuda-programming)
 
 ## Model
 
@@ -172,6 +185,11 @@ The **softmax** function is a function that turns a vector of K real values into
 </p>
 
 **Click for the codes of this section; [UNet_1.py](src/UNet_1.py)**
+
+**You can review my notes, which contain basic information about the model, under the following headings;**
+- [What is the difference between CNN and Fully CNN (FCNN)?](/Questions_and_Answers.md#--what-is-the-difference-between-cnn-and-fully-cnn-fcnn-)
+- [What are the different layers on CNN?](/Questions_and_Answers.md#--what-are-the-different-layers-on-cnn)
+- [What is activation function ? Why is softmax usually used in the last layer?](/Questions_and_Answers.md#--what-is-activation-function--why-is-softmax-usually-used-in-the-last-layer)
 
 ## Train
 
@@ -235,6 +253,17 @@ The model is tested with validation data at the end of each epoch and the loss v
 
 **Click for the codes of this section; [train.py](src/train.py)**
 
+**You can review my notes, which contain basic information about the train, under the following headings;**
+- [What is parameter and hyper-parameter in NN ?](/Questions_and_Answers.md#--what-is-parameter-and-hyper-parameter-in-nn-)
+- [Validation Set](/Questions_and_Answers.md#--validation-dataset)
+- [What is an epoch?](/Questions_and_Answers.md#--what-is-an-epoch)
+- [What is batch?](/Questions_and_Answers.md#--what-is-batch)
+- [What is iteration?](/Questions_and_Answers.md#--what-is-iteration)
+- [What is Cost Function?](/Questions_and_Answers.md#--what-is-the-cost-function)
+- [What is/are the purpose(s) of an optimizer in NN?](/Questions_and_Answers.md#--what-isare-the-purposes-of-an-optimizer-in-nn)
+- [What is Batch Gradient Descent & Stochastic Gradient Descent?](/Questions_and_Answers.md#--what-is-batch-gradient-descent--stochastic-gradient-descent)
+- [What is Backpropogation? What is used for?](/Questions_and_Answers.md#--what-is-backpropogation--what-is-used-for-)
+
 ## Predict
 
 To see the results of the trained model, estimation was done with test data never seen before by the model.
@@ -282,14 +311,14 @@ The brightness and contrast values of the Train data were changed and saved.
 	    img_aug = np.array(img_aug)
 	    cv2.imwrite(new_path, img_aug)
 
-The model was retrained with the duplicated train data set. New loss values and graph;
-<p  align="center">
-<img  src="images/Unet_1-loss.png"  width="">
-</p>
-
 Examples of augmented data;
 <p  align="center">
 <img  src="images/augmentation.png"  width="">
+</p>
+
+The model was retrained with the duplicated train data set. New loss values and graph;
+<p  align="center">
+<img  src="images/Unet_1-loss.png"  width="">
 </p>
 
 Predicted images;
