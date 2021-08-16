@@ -15,7 +15,17 @@ In the model training, 8.555 image data collected from the highway by Ford Otosa
 <img  src="images/dataset.png"  width="">
 </p> 
 
-### [Click here](/Questions_and_Answers.md) for the question and answer page that includes basic information about semantic segmentation and deep learning.
+**You can review my notes, which contain basic information about semantic segmentation and deep learning, under the following headings;**
+- [What is Machine Learning?](/Questions_and_Answers.md#--what-is-machine-learning)
+- [What is Unsupervised vs Supervised learning difference?](/Questions_and_Answers.md#--what-is-unsupervised-vs-supervised-learning-difference)
+- [What is Deep Learning?](/Questions_and_Answers.md#--what-is-deep-learning)
+- [What is Neural Network (NN)?](/Questions_and_Answers.md#--what-is-neural-network-nn)
+- [What is Convolution Neural Network (CNN)?](/Questions_and_Answers.md#--what-is-convolution-neural-network-cnn-please-give-2-advantages-over-nn)
+- [What is segmentation task in NN? Is it supervised or unsupervised?](/Questions_and_Answers.md#--what-is-segmentation-task-in-nn-is-it-supervised-or-unsupervised)
+- [What is classification task in NN? Is it supervised or unsupervised?](/Questions_and_Answers.md#--what-is-classification-task-in-nn-is-it-supervised-or-unsupervised)
+- [Compare segmentation and classification in NN.](/Questions_and_Answers.md#--compare-segmentation-and-classification-in-nn)
+- [What is data and dataset difference?](/Questions_and_Answers.md#--what-is-data-and-dataset-difference)
+- [What is the difference between supervised and unsupervised learning in terms of dataset?](/Questions_and_Answers.md#--what-is-the-difference-between-supervised-and-unsupervised-learning-in-terms-of-dataset)
 
 ## Parts of the project;
 - [Json to Mask](#json-to-mask)
