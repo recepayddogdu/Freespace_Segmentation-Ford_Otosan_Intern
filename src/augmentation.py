@@ -6,6 +6,7 @@ import tqdm
 from torchvision import transforms as T
 from constant import *
 from train import *
+from PIL import Image
 
 def image_augmentation(image_path):
     

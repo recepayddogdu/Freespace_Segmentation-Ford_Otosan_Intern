@@ -2,7 +2,7 @@ import os
 import cv2
 import numpy as np
 import tqdm
-from constant import *
+from constant_test import *
 
 if not os.path.exists(MASKED_IMAGES_DIR):
     os.mkdir(MASKED_IMAGES_DIR)

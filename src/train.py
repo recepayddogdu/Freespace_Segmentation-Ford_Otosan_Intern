@@ -63,10 +63,13 @@ train_label_path_list = mask_path_list[valid_ind:]  #Get the elements of the mas
 
 if augmentation:
     # PREPARE AUGMENTATED IMAGE AND MASK LISTS
-    aug_image_list = glob.glob(os.path.join(AUG_IMAGE_DIR, "*"))
-    aug_image_list.sort()
-    aug_mask_list = glob.glob(os.path.join(AUG_MASK_DIR, "*"))
-    aug_mask_list.sort()
+    aug_image_list-full = glob.glob(os.path.join(AUG_IMAGE_DIR, "*"))
+    aug_image_list-full.sort()
+    aug_image_list = aug_image_list-full[valid_ind:]
+    
+    aug_mask_list-full = glob.glob(os.path.join(AUG_MASK_DIR, "*"))
+    aug_mask_list-full.sort()
+    aug_mask_list = aug_mask_list-full[valid_ind:]
     
     aug_size = int(len(aug_mask_list)/2)
     

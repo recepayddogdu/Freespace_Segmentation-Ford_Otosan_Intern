@@ -3,7 +3,7 @@ import cv2
 import json
 import os
 import tqdm
-from constant import *
+from constant_test import *
 
 if not os.path.exists(MASK_DIR): #MASK_DIR yolunda masks klasörü yoksa yeni klasör oluştur.
     os.mkdir(MASK_DIR)

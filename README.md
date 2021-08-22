@@ -6,7 +6,7 @@ The project was developed with technologies such as **Python**, **Pytorch**, **o
 Below are the image used while testing the model, the expected output from the model, and the drivable fields that the model predicts;
 
 <p  align="center">
-<img  src="images/preds.gif"  width="">
+<img  src="images/predict_wlogo.gif"  width="">
 </p> 
 
 In the model training, 8.555 image data collected from the highway by Ford Otosan were used. Examples from the dataset;
@@ -330,4 +330,10 @@ Predicted images;
 <p  align="center">
 <img  src="images/predict.png"  width="">
 </p>
+
+Test results with random data collected on different days;
+(Click `Right click->open image in new tab or save image as..` to view larger images.)
+<p  align="center">
+<img  src="images/p1_test.jpg"  width="">
+</p> 
 
