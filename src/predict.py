@@ -9,9 +9,6 @@ import numpy as np
 from constant import *
 from train import *
 
-if not os.path.exists(PREDICT_DIR): #PREDICT_DIR yolunda predicts klasörü yoksa yeni klasör oluştur.
-    os.mkdir(PREDICT_DIR)
-
 #### PARAMETERS #####
 cuda = True
 test = True
@@ -21,14 +18,18 @@ input_shape = input_shape
 #####################
 
 if test:
+    if not os.path.exists(TEST_PREDICT_DIR): 
+      os.mkdir(TEST_PREDICT_DIR)
     test_input_path_list = glob.glob(os.path.join(TEST_DIR, "*"))
     predict_path = os.path.join(TEST_PREDICT_DIR, model_name.split(".")[0])
 else:
+    if not os.path.exists(PREDICT_DIR): 
+      os.mkdir(PREDICT_DIR)
     predict_path = os.path.join(PREDICT_DIR, model_name.split(".")[0])
 
-if not os.path.exists(predict_path): #predict_path yolunda predicts klasörü yoksa yeni klasör oluştur.
+if not os.path.exists(predict_path): 
     os.mkdir(predict_path)
-    
+
 # LOAD MODEL
 model = torch.load(model_path)
 #Remember that you must call model.eval() to set dropout and batch normalization layers to evaluation mode before running inference. 
@@ -72,3 +73,4 @@ def predict(model, images):
 
 if __name__ == "__main__":
     predict(model, test_input_path_list)
+
