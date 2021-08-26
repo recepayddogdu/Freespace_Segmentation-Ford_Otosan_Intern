@@ -21,6 +21,7 @@ if test:
     if not os.path.exists(TEST_PREDICT_DIR): 
       os.mkdir(TEST_PREDICT_DIR)
     test_input_path_list = glob.glob(os.path.join(TEST_DIR, "*"))
+    test_input_path_list.sort()
     predict_path = os.path.join(TEST_PREDICT_DIR, model_name.split(".")[0])
 else:
     if not os.path.exists(PREDICT_DIR): 
@@ -73,4 +74,3 @@ def predict(model, images):
 
 if __name__ == "__main__":
     predict(model, test_input_path_list)
-
