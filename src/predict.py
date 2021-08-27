@@ -62,7 +62,7 @@ def predict(model, images):
         mask_resize = cv2.resize(mask_uint8, ((img.shape[1]), (img.shape[0])), interpolation = cv2.INTER_CUBIC)
         
         
-        img_resize = cv2.resize(img, input_shape)
+        #img_resize = cv2.resize(img, input_shape)
         mask_ind = mask_resize == 1
         #copy_img = img_resize.copy()
         copy_img = img.copy()
