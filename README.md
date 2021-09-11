@@ -38,7 +38,7 @@ In the model training, 8.555 image data collected from the highway by Ford Otosa
 
 
 ## Json to Mask
-JSON files are obtained as a result of highway images tagged by Ford Otosan Annotation Team. The JSON files contain the exterior and interior point locations of the freespace (drivable area) class. 
+JSON files are obtained as a result of highway images labeled by Ford Otosan Annotation Team. The JSON files contain the exterior and interior point locations of the freespace (drivable area) class. 
 
 The file structure is as follows;
 
