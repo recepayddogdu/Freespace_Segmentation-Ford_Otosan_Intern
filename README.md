@@ -46,7 +46,7 @@ The file structure is as follows;
 <img  src="images/json_file.png"  width="">
 </p> 
 
-A mask was created with the data in the JSON file to identify the pixels with freespace in the image.
+A mask was created with the data in the JSON file to identify the pixels of the freespace in the image.
 
 The `fillPoly` function from the cv2 library was used to draw the masks.
 
